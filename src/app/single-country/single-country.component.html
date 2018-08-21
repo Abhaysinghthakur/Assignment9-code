@@ -1,0 +1,34 @@
+<div class="container" *ngIf="countryData">
+  <div class="row">
+    <div class="col-12 " style="text-align: center">
+      <img src={{countryData[0].flag}} class="img-fluid coverImage" alt="Responsive image">
+    </div>
+    <div class="col-12">
+      <ul class="list-group" style="text-align: center">
+        <li class="list-group-item list-group-item-info">Country: {{countryData[0].name}}.</li>
+        <li class="list-group-item list-group-item-info">Capital: {{countryData[0].capital}}.</li>
+        <li class="list-group-item list-group-item-info">Region: {{countryData[0].region}}. </li>
+        <li class="list-group-item list-group-item-info">Subregion: {{countryData[0].subregion}}. </li>
+        <li class="list-group-item list-group-item-info">Population: {{countryData[0].population}}. </li>
+        <li class="list-group-item list-group-item-info">
+          Currency: 
+          <span *ngFor="let currency of countryData[0].currencies;let last=last">
+            <span [routerLink]="['/countries/currency',currency.code]" class="goTo">  
+              {{currency.name}}{{last?'.':','}}
+            </span>
+          </span>
+        </li>
+        <li class="list-group-item list-group-item-info">
+          Languages: 
+          <span *ngFor="let language of countryData[0].languages; let last=last">
+            <span [routerLink]="['/countries/lang',language.iso639_1]" class="goTo">
+              {{language.name}}{{last?'.':','}}
+            </span>
+          </span>
+        </li>
+      </ul>
+      <button type="button" (click)="goBack()" class="btn btn-warning" style="margin: 5% 0 5% 0">Go Back</button>
+      <button type="button" (click)="goRegion()" class="btn btn-secondary" style="margin: 5% 0 5% 2%">Goto Regions</button>
+    </div>
+  </div>
+</div>
