@@ -1,5 +1,13 @@
 # Assignment9
 
+An Angular application for countries information app.
+this can be viewed here:- https://abhaysinghthakur.github.io/Assignment9/
+
+and problem statement can be viewed here:-
+https://s3-ap-southeast-1.amazonaws.com/edwisor-india-bucket/assignments/web03/Web03s4l3.pdf
+
+# Assignment9
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
 
 ## Development server
